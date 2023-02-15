@@ -1,0 +1,21 @@
+{% include 'header.html' %}
+
+<body>
+<div class="container">
+
+        <div class="col-sm-12 col-md-8">
+            <h1 class="h1-style">Add a new café into the database</h1>
+            <div class="form-group">
+                    <form action="." method="POST">
+
+                        {% csrf_token %}
+                        {{ form.as_p }}
+
+                    <input class="btn btn-warning" type="submit" value="Save">
+                    </form>
+            </div>
+            <p><a class="mrg-button btn btn-primary btn-lg" href="/cafes">See all cafes</a></p>
+        </div>
+    </div>
+</body>
+</html>
